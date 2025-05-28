@@ -1,0 +1,187 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+.swapCard {
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 2.5px solid #e0e0e0;
+  padding: 4px;
+  object-fit: contain;
+  display: block;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #232526;
+  letter-spacing: 1px;
+}
+
+.inputContainer {
+  margin-bottom: 0.5rem;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputField {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  background: #f9f9f9;
+  color: #232526;
+  transition: border 0.2s;
+}
+.inputField:focus {
+  border: 1.5px solid #4CAF50;
+  outline: none;
+}
+
+.tokenSelectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #f3f3f3;
+  border-radius: 0.75rem;
+  padding: 0.2rem 0.7rem 0.2rem 0.2rem;
+  border: 1.5px solid #e0e0e0;
+}
+
+.tokenIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.selectField, .selectField option {
+  background: #fff !important;
+  color: #232526 !important;
+}
+
+.selectField {
+  border: 1.5px solid #e0e0e0;
+  font-size: 1.1rem;
+  padding: 0.4rem 1.2rem 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.selectField:focus, .selectField:hover {
+  border: 1.5px solid #2196F3;
+  box-shadow: 0 0 0 2px #2196F322;
+}
+
+.button {
+  width: 100%;
+  padding: 1.1rem;
+  background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+}
+.button:hover {
+  background: linear-gradient(90deg, #43a047 0%, #1976d2 100%);
+}
+.button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.98rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border-radius: 0.25rem;
+  border: 1px solid #f5c6cb;
+}
+
+.priceImpact {
+  color: #666;
+  font-size: 0.98rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  border: 1px solid #e9ecef;
+}
+
+.priceImpact.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.priceImpact.danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Add a custom dropdown arrow for select fields */
+.selectField {
+  background: url('data:image/svg+xml;utf8,<svg ...></svg>') no-repeat right 10px center / 16px 16px #333;
+  -webkit-appearance: none; /* Removes default styling on select elements */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Add any additional responsive styles if necessary */
+@media (max-width: 640px) {
+  .swapCard {
+    width: 98%;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+    padding: 2px;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+}
